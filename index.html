@@ -4,234 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
-    <link rel="stylesheet" href="styles.css">
-    
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        img {
+            width: 100%; /* Adjust the size as needed */
+            max-width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
-    <section id="pg1">
-         <div class="banner">
-    <div class="top-bar">
-      <div class="left-section">
-        <div class="logo-container">
-        <div id="logo">
-        <img src="src/pg1_logo.png" alt="JTC Logo" class="logo"/>
-        </div>
-        <div class="logo-text">
-            <span> JTC TEXTILES LLC </span>
-        </div>
-    </div>
-    <!-- </div> -->
-    <!-- <div class="midsection"> -->
-        <div class="slogan">
-            <span class="slogan-text">Elevating hospitality, one thread at a time</span>
-        </div>
-      </div>
-      <div class="right-section">
-        <div class="email">sales@jtctextiles.com</div>
-        <div class="phone">+971528700197</div>
-      </div>
-    </div>
-    <div class="image-section">
-      <img src="src/pg1_bed.jpg" alt="Bed Image" class="main-image"/>
-    </div>
-  </div>
-
-
-    </section>
-    <section id="pg2">
-        <div class="container">
-    <div class="text-content">
-      <p>
-        Welcome to JTC, a trusted manufacturer specializing in diverse range of high-quality textile products.
-        We provide a variety of solutions for the hospitality industry and beyond, ranging from soft bed linens
-        to durable bath and banquet items. With decades of experience, our team understands what your business
-        needs — and we deliver it with care.
-      </p>
-      <p>
-        At JTC, we don’t simply supply products — we offer comfort, durability, and dependability that enhance
-        every facet of your hospitality experience.
-      </p>
-    </div>
-    <div class="image-content">
-      <img src="src/pg2_img.jpg" alt="Textile Products">
-    </div>
-  </div>
-    </section>
-    <section id="pg3">
-       <div class="container">
-    <div class="text-content">
-      <span class="text_section">
-        From loom to luxury, 
-        we handle every step of your linen supply - 
-        manufactured and delivered with precision
-      </span>
-    </div>
-    <div class="image-content">
-      <img src="src/pg3_img.jpg" alt="Loom Photo">
-    </div>
-  </div>
-    </section>
-    <section id="pg4">
-        <div class="container">
-        <div class="text-container">
-            <div class="mission-vision">
-                <div class="mission">
-                    <h2>Commitment</h2>
-                    <p>At JTC, our mission is to manufacture high-quality linens that meet the evolving needs of our clients through reliable delivery, and a deep focus on comfort and performance.</p>
-                </div>
-                <div class="vision">
-                    <h2>Vision</h2>
-                    <p>To be a global leader in textiles, known for delivering high-quality, functional and innovative products that enhance everyday living across industries.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    </section>
-    <section id="pg5">
-        <div class="grid-container">
-        <!-- Top row: Green background with white text -->
-        <div class="grid-item dark-bg">
-            <div class="content-box">
-            <img src="src/pg5_img1.jpg" alt="Housekeeping" class="icon"/>
-                </div>
-        </div>
-        <div class="grid-item dark-bg">
-            <div class="content-box">
-                <h3>BATH LINEN</h3>
-                <ol class="product-list">
-                    <li>Bath & Face Towel</li>
-                    <li> Hand Towel</li>
-                    <li> Pool Towel</li>
-                    <li> Bathrobe</li>
-                    <li> Bath Mat</li>
-                </ol>    
-            </div>
-        </div>
-        <div class="grid-item dark-bg">
-            <div class="content-box">
-                        <img src="src/pg5_img2.jpg" alt="Plate with Napkin" class="icon"/>    
-            </div>
-        </div>
-        
-        <!-- Bottom row: White background with green text -->
-        <div class="grid-item light-bg">
-            <div class="content-box">
-            <h3>BED LINEN</h3>
-                <ol class="product-list">
-                    <li>Bedsheet</li>
-                    <li>Pillow Cover</li>
-                    <li>Duvet Cover</li>
-                    <li>Pillow</li>
-                    <li>Duvet</li>
-                    <li>Mattress Protector</li>
-                    <li>Pillow Protector</li>
-                </ol>    
-            </div>
-        </div>
-        <div class="grid-item light-bg">
-            <div class="content-box">
-                <img src="src/pg5_img1.jpg" alt="Stack of Towels" class="icon"/>
-                </div>
-        </div>
-        <div class="grid-item light-bg">
-            <div class="content-box">
-            <h3>BANQUET LINEN</h3>
-                <ol class="product-list">
-                    <li>Napkin</li>
-                    <li>Tablecloth</li>
-                    <li>Table Runner</li>
-                </ol>    
-            </div>
-        </div>
-    </div>
-    </section>
-    <section id="pg6">
-        <div class="container">
-            <div class="left-section">
-                <div class="largelogo">
-                    <img src="src/pg6_logo.png" alt="JTC Logo" class="logo"/>
-                </div>
-                <div class="text-container">
-                    <span>Your Trusted Partner in Every Thread</span>
-                    </div>
-            </div>
-            <div class="right-section">
-                <div class="feature-row">
-            <div class="image-column">
-                <img src="src/feature1.jpg" alt="Feature 1">
-            </div>
-            <div class="text-column">
-                <span>Direct from the Manufacturer</span>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum eos eius labore non consequatur asperiores. Accusantium porro iure provident id, non praesentium nemo maxime commodi quidem dolorem cumque iste fugit!</p>
-            </div>
-        </div>
-        
-        <hr class="divider">
-        
-        <div class="feature-row">
-            <div class="image-column">
-                <img src="src/feature2.jpg" alt="Feature 2">
-            </div>
-            <div class="text-column">
-                <span>Cost-Effectiveness Without Compromising Quality</span>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita blanditiis commodi cum cumque minus id labore pariatur adipisci culpa, magni, ipsum nulla, soluta quia fugiat quo facilis sint amet perspiciatis?</p>
-            </div>
-        </div>
-        
-        <hr class="divider">
-        
-        <div class="feature-row">
-            <div class="image-column">
-                <img src="src/feature3.jpg" alt="Feature 3">
-            </div>
-            <div class="text-column">
-                <span>Built for Hospitality Durability</span>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero incidunt cum, perferendis repellat numquam debitis consectetur fugit, reprehenderit consequuntur earum, nobis necessitatibus qui quisquam expedita adipisci officia doloribus ea similique!</p>
-            </div>
-        </div>
-            </div>
-    </section>
-    <section id="pg7"></section>
-    <section id="pg8">
-        <div class="container">
-            <div class="image-container">
-                <img src="src/pg8_sunset.jpg" alt="Product Image">
-            </div>
-            <div class="text-container">
-                <span>Sustainability Footprint</span>
-                <hr class="divider">
-                <p>We are actively working to lower our carbon footprint, focusing on responsible sourcing. 70% of our company energy requirements are met from our own renewable sources. Our goal is to create long-lasting products that not only serve the needs of our clients but also contribute to a cleaner, greener future.</p>
-            </div>
-        </div>
-    </section>
-    <section id="pg9">
-        <div class="container">
-            <div class="left-section">
-                <div class="heading">
-                    <span>Contact Information</span>
-                </div>
-                <div class="address">
-                    <span>JTC Textiles LLC,</span>
-                    <span>Plot #187,</span>
-                    <span>The Exchange Tower, Business Bay,</span>
-                    <span>Dubai</span>
-
-                </div>
-                <div class="mailandno">
-                    <span>Mobile: +971528700197</span>
-                    <span>sales@jtctextiles.com</span>
-                </div>
-            </div>
-            <div class="right-section">
-                <div class="text-container">
-                    <span>Scan here to connect with us</span>
-                </div>
-                <div class="qr-code">
-                    <img src="src/qr_code.png" alt="QR Code">
-                </div>
-            </div>
-        </div>
-    </section>
-
+   <img src="src/1.svg" alt="">
+   <img src="src/2.svg" alt="">
+   <img src="src/3.svg" alt="">
+   <img src="src/4.svg" alt="">
+   <img src="src/5.svg" alt="">
+   <img src="src/6.svg" alt="">
+   <img src="src/7.svg" alt="">
+   <img src="src/8.svg" alt="">
+   <img src="src/9.svg" alt="">
 </body>
 </html>
