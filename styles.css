@@ -268,10 +268,246 @@ section {
   line-height: 1.5;
 }
 
-/* Responsive adjustments for smaller screens */
+
+/* Section Pg-6 */
+
+
+#pg6 .container {
+  margin: 0;
+    width: 100%;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+    align-items: center;
+}
+
+#pg6 .feature-row {
+  display: flex;
+  align-items: center;
+  margin: 40px 0;
+}
+
+#pg6 .image-column {
+  width: 30%;
+  padding-right: 30px;
+}
+
+#pg6 .image-column img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#pg6 .text-column {
+  width: 70%;
+}
+
+#pg6 .text-column h3 {
+  color: var(--primary-color);
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+#pg6 .text-column p {
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+#pg6 .divider {
+  border: none;
+  height: 1px;
+  background-color: var(--secondary-color);
+  margin: 30px 0;
+}
+
+/* Responsive adjustments for Section Pg-6 */
 @media (max-width: 768px) {
+  #pg6 .feature-row {
+    flex-direction: column;
+  }
+
+  #pg6 .image-column {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  #pg6 .text-column {
+    width: 100%;
+  }
+}
+
+
+/* Section Pg-8 */
+
+#pg8 .container {
+    width: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 60px 0;
+    /* min-height: 100vh; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#pg8 .image-container {
+    margin: 0;
+    width: 100%;
+    /* display: flex; */
+    /* justify-content: center; */
+}
+
+#pg8 .image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    /* border-radius: 8px; */
+}
+
+#pg8 .text-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+}
+
+#pg8 .text-container span {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+    /* color: var(--primary-color); */
+}
+#pg8 .text-container hr {
+    width: 100%;
+    height: 1px;
+    background-color: var(--primary-color);
+    margin: 20px 0;
+}
+#pg8 .text-container p {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 70%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Section Pg-9 */
+
+#pg9 .container{
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 60px 0;
+  /* min-height: 100vh; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#pg9 .left-section {
+    align-items: left;
+    margin: 0;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+#pg9 .heading span {
+    font-size: 30px;
+    font-weight: bold;
+}
+#pg9 .address, .mailandno {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#pg9 .address, .mailandno span {
+    /* margin-left: 10px; */
+    width: 100%;
+    font-size: 16px;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* General responsive adjustments */
+  section {
+    padding: 40px 20px;
+  }
+  
+  /* Section Pg-1 responsive */
+  #pg1 .top-bar {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  #pg1 .left-section {
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  #pg1 .right-section {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  /* Section Pg-2 and Pg-3 responsive */
+  #pg2 .container,
+  #pg3 .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  #pg2 .text-content,
+  #pg3 .text-content {
+    max-width: 100%;
+    margin-bottom: 20px;
+    order: 2; /* Text below image on mobile */
+  }
+  
+  #pg2 .image-content,
+  #pg3 .image-content {
+    order: 1; /* Image above text on mobile */
+  }
   #pg5 .grid-container {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
+  }
+  /* Section Pg-8 responsive */
+  #pg8 .container {
+    flex-direction: column;
+  }
+  
+  #pg8 .text-container p {
+    max-width: 90%;
+  }
+  
+  /* Section Pg-9 responsive */
+  #pg9 .container {
+    flex-direction: column;
+  }
+  
+  #pg9 .right-section {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  /* Adjust heights for mobile */
+  #pg2, #pg3, #pg4 {
+    height: auto;
+    min-height: 100vh;
   }
 }
