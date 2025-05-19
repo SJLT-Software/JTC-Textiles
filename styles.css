@@ -1,20 +1,52 @@
 /* General Styles */
 :root {
-    --primary-color: #5f6547;
-    --secondary-color: #d9d9d2;
-    --accent-color: #f4f4f4;
-    --text-color: #445c5d;
+    --primary-color: #686f5b;
+    --secondary-color: #cdcfc6;
+    --accent-color: #f2efeb;
+    --text-color: #686f5b;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+
+
 body {
   margin: 0;
   padding: 0;
-  /* font-family: Arial, sans-serif; */
+  font-family: Arial, sans-serif;
   background-color: var(--accent-color);
+   line-height: 1.6;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  max-width: 100vw; /* Ensure content doesn't exceed viewport width */
+  box-sizing: border-box; /* Include padding in width calculations */
+}
+img {
+  max-width: 100%;
 }
 section {
   margin: 0;
   padding: 0;
+  width: 100vw;
+  max-width: 100%;
+  /* height: 100vh; */
+  /* overflow: hidden; */
+  /* position: relative; */
 }
+/* Lazy loading to improve speed */
+/* section {
+    opacity: 1;
+    will-change: opacity;
+}
+
+section:not(#pg1) {
+    opacity: 0;
+} */
 
 
 /* Section Pg-1 */
@@ -123,15 +155,16 @@ section {
 #pg3 {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: white; /* Matching the greenish background */
+  background-color: var(--accent-color); /* Matching the greenish background */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  color: var(--text-color);
 }
 #pg3 .container {
-    background-color: white;
-    color: black;
+    background-color: var(--accent-color);
+    color: var(--text-color);
     display: flex;
     align-items: center;
     padding: 40px;
@@ -145,7 +178,7 @@ section {
     font-size: 24px;
     line-height: 1.6;
     max-width: 70%;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 #pg3 .image-content {
@@ -166,7 +199,7 @@ section {
 #pg4 {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-image: url('src/pg4_img.jpg');
+  background-image: url('src/pg4_bg.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -211,8 +244,8 @@ section {
 #pg5 {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: white;
-  padding: 60px 0;
+  background-color: var(--accent-color);
+  /* padding: 60px 0; */
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -222,10 +255,9 @@ section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 20px;
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
 }
 
 #pg5 .grid-item {
@@ -236,23 +268,54 @@ section {
   min-height: 250px;
 }
 
+/* #pg5 .grid-item:nth-child(odd) {
+  padding: 0;
+} */
+
 #pg5 .dark-bg {
   background-color: var(--primary-color);
-  color: white;
+  color: var(--accent-color);
 }
 
 #pg5 .light-bg {
-  background-color: white;
-  color: var(--primary-color);
-  border: 2px solid var(--primary-color);
+  background-color: var(--accent-color);
+  color: var(--text-color);
 }
 
 #pg5 .content-box {
-    
   text-align: center;
-  padding: 20px;
+  /* padding: 20px; */
+  margin: 0;
   width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px var(--primary-color);
 }
+/* Text content styles comment to make everything start from top */
+#pg5 .content-box.text-cont {
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+#pg5 .content-box.light-bg {
+  box-shadow: 0 3px 10px var(--accent-color);
+}
+
+#pg5 .content-box.img-cont {
+  box-shadow: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+}
+
 
 #pg5 .content-box h3 {
   font-size: 22px;
@@ -267,7 +330,16 @@ section {
   font-size: 16px;
   line-height: 1.5;
 }
-
+#pg5 img {
+  max-width: 80%;
+  /* height: auto; */
+  height:100%;
+  max-height: 100%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
 
 /* Section Pg-6 */
 
@@ -282,6 +354,24 @@ section {
   display: flex;
   justify-content: center;
     align-items: center;
+}
+
+#pg6 .left-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+#pg6 .left-section span {
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: var(--primary-color);
 }
 
 #pg6 .feature-row {
@@ -342,6 +432,116 @@ section {
   }
 }
 
+/* Section Pg-7 */
+#pg7 {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--accent-color);
+  padding: 60px 0;
+}
+
+#pg7 .container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#pg7 .top-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+#pg7 .feature-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+#pg7 .feature {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  /* background-color: white; */
+  border-radius: 8px;
+  padding: 20px;
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+}
+
+#pg7 .image-column {
+  width: 40%;
+  margin-right: 20px;
+}
+
+#pg7 .image-column img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#pg7 .text-column {
+  width: 60%;
+}
+
+#pg7 .text-column span {
+  display: block;
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#pg7 .text-column p {
+  color: var(--text-color);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+#pg7 .bottom-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#pg7 .bottom-section img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments for Section Pg-7 */
+@media (max-width: 1024px) {
+  #pg7 .feature {
+    padding: 15px;
+  }
+  
+  #pg7 .text-column span {
+    font-size: 16px;
+  }
+  
+  #pg7 .text-column p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  #pg7 .feature-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #pg7 .feature {
+    width: 100%;
+  }
+  
+  #pg7 .image-column {
+    margin-right: 15px;
+  }
+}
 
 /* Section Pg-8 */
 
@@ -351,34 +551,37 @@ section {
     font-family: Arial, sans-serif;
     background-color: var(--secondary-color);
     color: var(--text-color);
-    padding: 60px 0;
-    /* min-height: 100vh; */
+    padding: 0;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 #pg8 .image-container {
-    margin: 0;
-    width: 100%;
-    /* display: flex; */
-    /* justify-content: center; */
+    flex: 1;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 #pg8 .image-container img {
-    max-width: 100%;
-    max-height: 100%;
-    /* border-radius: 8px; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 #pg8 .text-container {
     flex: 1;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 20px;
-    width: 100%;
+    padding: 40px;
 }
 
 #pg8 .text-container span {
@@ -440,6 +643,56 @@ section {
     font-size: 16px;
 }
 
+#pg9 .right-section {
+  margin-top: 30px;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%; /* Add width constraint instead of commenting it out */
+  text-align: center;
+}
+
+#pg9 img {
+  background-color: var(--accent-color);
+  max-width: 100%; /* Make image responsive */
+  height: auto; /* Maintain aspect ratio */
+  padding: 10px; /* Add some padding around QR code */
+  border-radius: 5px; /* Optional: add slight rounding */
+}
+
+
+/* Add medium screen breakpoint */
+@media (min-width: 769px) and (max-width: 1024px) {
+  #pg2 .container, 
+  #pg3 .container,
+  #pg8 .container,
+  #pg9 .container {
+    padding: 30px;
+  }
+  
+  #pg9 .right-section {
+    margin-right: 20px;
+    width: 35%;
+  }
+  
+  #pg5 .grid-item {
+    padding: 20px;
+  }
+  
+  #pg6 .container {
+    flex-direction: column;
+  }
+  
+  #pg6 .left-section {
+    margin-bottom: 30px;
+  }
+  
+  #pg6 .right-section {
+    width: 90%;
+  }
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -498,16 +751,152 @@ section {
   /* Section Pg-9 responsive */
   #pg9 .container {
     flex-direction: column;
+    padding: 40px 20px; /* Add horizontal padding */
+  }
+  
+  #pg9 .left-section {
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+    align-items: center;
   }
   
   #pg9 .right-section {
-    margin-top: 30px;
-    text-align: center;
+    margin: 30px auto 0;
+    width: 80%; /* Wider on mobile */
+    max-width: 300px; /* Limit maximum width */
+  }
+  
+  #pg9 .qr-code img {
+    max-width: 200px; /* Control QR code size on mobile */
   }
   
   /* Adjust heights for mobile */
   #pg2, #pg3, #pg4 {
     height: auto;
     min-height: 100vh;
+  }
+}
+
+/* Improve responsive behavior for sections with 100vh height */
+@media (max-width: 768px) and (orientation: portrait) {
+  #pg2, #pg3, #pg4, #pg5, #pg8 {
+    height: auto;
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+  
+  /* Fix container overflow issues on small screens */
+  .container {
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* Fix Section Pg-4 text container for better readability on small screens */
+@media (max-width: 768px) {
+  #pg4 .text-container {
+    padding: 25px 30px;
+    max-width: 90%;
+  }
+}
+
+/* Improve Pg-5 grid layout on medium screens */
+@media (min-width: 769px) and (max-width: 1024px) {
+  #pg5 .grid-item {
+    padding: 15px;
+    min-height: 200px;
+  }
+  
+  #pg5 .content-box h3 {
+    font-size: 18px;
+  }
+  
+  #pg5 .product-list {
+    font-size: 14px;
+  }
+}
+
+/* Fix Pg-8 responsive layout issues */
+@media (max-width: 768px) {
+  #pg8 .container {
+    flex-direction: column-reverse; /* Image below text for mobile */
+  }
+  
+  #pg8 .image-container, 
+  #pg8 .text-container {
+    width: 100%;
+  }
+  
+  #pg8 .text-container p {
+    max-width: 100%;
+  }
+  
+  #pg8 .image-container {
+    height: 40vh; /* Control image height on mobile */
+  }
+}
+
+/* Refine Pg-7 features for medium screens */
+@media (min-width: 769px) and (max-width: 1024px) {
+  #pg7 .feature {
+    padding: 15px;
+  }
+  
+  #pg7 .image-column {
+    width: 35%;
+  }
+  
+  #pg7 .text-column {
+    width: 65%;
+  }
+}
+
+/* Improve small screen touch targets */
+@media (max-width: 480px) {
+  #pg1 .logo {
+    width: 50px;
+  }
+  
+  #pg1 .top-bar {
+    padding: 15px 0;
+  }
+  
+  #pg9 .container {
+    padding: 30px 15px;
+  }
+  
+  #pg9 .heading span {
+    font-size: 24px;
+  }
+}
+
+/* Fix potential horizontal scrolling issues */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Improve Pg-6 feature rows on smaller screens */
+@media (max-width: 768px) {
+  #pg6 .feature-row {
+    flex-direction: column;
+    margin: 30px 0;
+  }
+  
+  #pg6 .image-column {
+    width: 100%;
+    padding-right: 0;
+    padding-bottom: 15px;
+  }
+  
+  #pg6 .text-column {
+    width: 100%;
+  }
+  
+  #pg6 .left-section span {
+    font-size: 24px;
   }
 }
