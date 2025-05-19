@@ -132,6 +132,20 @@ section:not(#pg1) {
 }
 
 @media (max-width: 480px) {
+  #pg1 .top-bar {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  #pg1 .left-section {
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  #pg1 .right-section {
+    text-align: center;
+    margin-top: 15px;
+  }
   #pg1 .logo {
     width: 50px;
   }
