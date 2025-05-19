@@ -9,21 +9,19 @@ html {
   scroll-behavior: smooth;
 }
 
-
-
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
   background-color: var(--accent-color);
-   line-height: 1.6;
+  line-height: 1.6;
 }
 
 html, body {
   margin: 0;
   padding: 0;
   /* overflow-x: hidden; Prevent horizontal scrolling */
-  max-width: 100vw; /* Ensure content doesn't exceed viewport width */
+  max-width: 100%; /* Ensure content doesn't exceed viewport width */
   box-sizing: border-box; /* Include padding in width calculations */
 }
 img {
@@ -32,7 +30,7 @@ img {
 section {
   margin: 0;
   padding: 0;
-  width: 100vw;
+  width: 100%;
   max-width: 100%;
   
 }
@@ -46,13 +44,23 @@ section:not(#pg1) {
     opacity: 0;
 } */
 
+@media (min-width: 481px) and (max-width: 768px) {
+}
+
+@media (max-width: 480px) {
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+}
+
+
 
 /* Section Pg-1 */
 
 #pg1 .banner {
   background-color: var(--secondary-color);
   margin: 0;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
 }
 
@@ -91,6 +99,7 @@ section:not(#pg1) {
   text-align: right;
   font-size: 14px;
   color: var(--text-color);
+  margin-right: 30px;
 }
 
 #pg1 .image-section {
@@ -103,6 +112,36 @@ section:not(#pg1) {
   width: 100%;
   height: auto;
   max-height: 90%;
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+#pg1 .top-bar {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  #pg1 .left-section {
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  #pg1 .right-section {
+    text-align: center;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  #pg1 .logo {
+    width: 50px;
+  }
+  
+  #pg1 .top-bar {
+    padding: 15px 0;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
 }
 
 /* Section Pg-2 */
@@ -146,6 +185,18 @@ section:not(#pg1) {
     border-radius: 30px;
 }
 
+@media (min-width: 481px) and (max-width: 768px) {
+}
+
+@media (max-width: 480px) {
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+}
+
+
+
+
 /* Section Pg-3 */
 #pg3 {
   margin: 0;
@@ -185,6 +236,16 @@ section:not(#pg1) {
     max-height: 100%;
     max-width: 100%;
 }
+
+@media (min-width: 481px) and (max-width: 768px) {
+}
+
+@media (max-width: 480px) {
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+}
+
 
 
 /* Section Pg-4 */
@@ -231,6 +292,17 @@ section:not(#pg1) {
   margin-bottom: 20px;
   color: #333;
 }
+
+@media (min-width: 481px) and (max-width: 768px) {
+}
+
+@media (max-width: 480px) {
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+}
+
+
 
 /* Section Pg-5 */
 #pg5 {
@@ -330,18 +402,28 @@ section:not(#pg1) {
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
+@media (min-width: 481px) and (max-width: 768px) {
+}
+
+@media (max-width: 480px) {
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+}
+
+
+
 /* Section Pg-6 */
 
 
 #pg6 .container {
   margin: 0;
-    width: 100%;
-  margin: 0 auto;
+  max-width: 100%;
   padding: 20px;
   background-color: var(--secondary-color);
   display: flex;
   justify-content: center;
-    align-items: center;
+  align-items: center;
 }
 
 #pg6 .left-section {
@@ -352,6 +434,7 @@ section:not(#pg1) {
   justify-content: center;
   align-items: center;
   padding: 20px;
+  text-align: center;
 }
 
 #pg6 .left-section span {
@@ -403,9 +486,8 @@ section:not(#pg1) {
   margin: 30px 0;
 }
 
-/* Responsive adjustments for Section Pg-6 */
-@media (max-width: 768px) {
-  #pg6 .feature-row {
+@media (min-width: 481px) and (max-width: 768px) {
+   #pg6 .feature-row {
     flex-direction: column;
   }
 
@@ -418,6 +500,12 @@ section:not(#pg1) {
   #pg6 .text-column {
     width: 100%;
   }
+}
+
+@media (max-width: 480px) {
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
 }
 
 /* Section Pg-7 */
@@ -501,7 +589,13 @@ section:not(#pg1) {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive adjustments for Section Pg-7 */
+
+@media (min-width: 481px) and (max-width: 768px) {
+}
+
+@media (max-width: 480px) {
+}
+
 @media (min-width: 769px) and (max-width: 1024px) {
   #pg7 .feature {
     padding: 15px;
@@ -530,6 +624,8 @@ section:not(#pg1) {
     margin-right: 15px;
   }
 }
+
+
 
 /* Section Pg-8 */
 
@@ -593,6 +689,17 @@ section:not(#pg1) {
     margin-bottom: 20px;
 }
 
+@media (min-width: 481px) and (max-width: 768px) {
+}
+
+@media (max-width: 480px) {
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+}
+
+
+
 /* Section Pg-9 */
 
 #pg9 .container{
@@ -650,6 +757,16 @@ section:not(#pg1) {
   border-radius: 5px; /* Optional: add slight rounding */
 }
 
+@media (min-width: 481px) and (max-width: 768px) {
+}
+
+@media (max-width: 480px) {
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+}
+
+
 
 /* Add medium screen breakpoint */
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -685,25 +802,12 @@ section:not(#pg1) {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   /* General responsive adjustments */
-  section {
+  /* section {
     padding: 40px 20px;
-  }
+  } */
   
   /* Section Pg-1 responsive */
-  #pg1 .top-bar {
-    flex-direction: column;
-    text-align: center;
-  }
   
-  #pg1 .left-section {
-    flex-direction: column;
-    margin-bottom: 15px;
-  }
-  
-  #pg1 .right-section {
-    text-align: center;
-    margin-top: 15px;
-  }
   
   /* Section Pg-2 and Pg-3 responsive */
   #pg2 .container,
@@ -844,13 +948,7 @@ section:not(#pg1) {
 
 /* Improve small screen touch targets */
 @media (max-width: 480px) {
-  #pg1 .logo {
-    width: 50px;
-  }
   
-  #pg1 .top-bar {
-    padding: 15px 0;
-  }
   
   #pg9 .container {
     padding: 30px 15px;
