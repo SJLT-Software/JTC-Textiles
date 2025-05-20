@@ -86,10 +86,12 @@ section:not(#pg1) {
   width: 60px;
   height: auto;
 }
+
 #pg1 .logo-text {
   font-size: 12px;
   color: var(--text-color);
 }
+
 #pg1 .slogan {
   font-style: italic;
   color: var(--text-color);
@@ -180,10 +182,11 @@ section:not(#pg1) {
 
 #pg2 .text-content {
     flex: 1;
-    font-size: 15px;
+    font-size: 20px;
     line-height: 1.6;
     max-width: 70%;
-    font-weight: bold;
+    /* font-weight: bold; */
+    text-align: center;
 }
 
 #pg2 .image-content {
@@ -200,12 +203,47 @@ section:not(#pg1) {
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
+  #pg2 {
+    height: auto;
+    min-height: 100vh;
+  }
+  #pg2 .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+  #pg2 .text-content {
+    max-width: 100%;
+    margin-bottom: 20px;
+    order: 2; /* Text below image on mobile */
+  }
+  #pg2 .image-content {
+    order: 1; /* Image above text on mobile */
+  }
 }
 
 @media (max-width: 480px) {
+   #pg2 {
+    height: auto;
+    min-height: 100vh;
+  }
+  #pg2 .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+  #pg2 .text-content {
+    max-width: 100%;
+    margin-bottom: 20px;
+    order: 2; /* Text below image on mobile */
+  }
+  #pg2 .image-content {
+    order: 1; /* Image above text on mobile */
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
+  #pg2 .container {
+    padding: 30px;
+  }
 }
 
 
@@ -234,9 +272,10 @@ section:not(#pg1) {
 
 #pg3 .text-content {
     flex: 1;
-    font-size: 24px;
+    font-size: 30px;
     line-height: 1.6;
     max-width: 70%;
+    text-align: center;
 }
 
 #pg3 .image-content {
@@ -251,13 +290,37 @@ section:not(#pg1) {
     max-width: 100%;
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
+@media (max-width: 768px) {
+  #pg3 {
+    height: auto;
+    min-height: 100vh;
+  }
+#pg3 .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  
+  #pg3 .text-content {
+    max-width: 100%;
+    margin-bottom: 20px;
+    order: 2; /* Text below image on mobile */
+  }
+  
+  
+  #pg3 .image-content {
+    order: 1; /* Image above text on mobile */
+  }
 }
 
 @media (max-width: 480px) {
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
+#pg3 .container {
+      padding: 30px;
+
+}
 }
 
 
@@ -307,7 +370,15 @@ section:not(#pg1) {
   color: #333;
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
+@media (max-width: 768px) {
+  #pg4 {
+    height: auto;
+    min-height: 100vh;
+  }
+   #pg4 .text-container {
+    padding: 25px 30px;
+    max-width: 90%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -392,20 +463,22 @@ section:not(#pg1) {
   border-radius: 0;
 }
 
-
 #pg5 .content-box h3 {
   font-size: 22px;
   margin-bottom: 15px;
 }
+
 #pg5 .product-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
+
 #pg5 .content-box p {
   font-size: 16px;
   line-height: 1.5;
 }
+
 #pg5 img {
   max-width: 80%;
   height:100%;
@@ -416,13 +489,29 @@ section:not(#pg1) {
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
+@media (max-width: 768px) {
+  #pg5 .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
 }
 
 @media (max-width: 480px) {
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
+   #pg5 .grid-item {
+    padding: 15px;
+    min-height: 200px;
+  }
+  
+  #pg5 .content-box h3 {
+    font-size: 18px;
+  }
+  
+  #pg5 .product-list {
+    font-size: 14px;
+  }
 }
 
 
@@ -433,8 +522,8 @@ section:not(#pg1) {
 #pg6 .container {
   margin: 0;
   max-width: 100%;
-  padding: 20px;
-  background-color: var(--secondary-color);
+  padding: 60px 0;
+  background-color: var(--accent-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -458,7 +547,7 @@ section:not(#pg1) {
   text-align: center;
   color: var(--primary-color);
 }
-
+/* 
 #pg6 .feature-row {
   display: flex;
   align-items: center;
@@ -491,6 +580,53 @@ section:not(#pg1) {
   color: var(--text-color);
   font-size: 16px;
   line-height: 1.6;
+} */
+
+#pg6 .feature-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-left: 15px;
+}
+
+#pg6 .feature {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  /* background-color: white; */
+  border-radius: 8px;
+  padding: 20px;
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+}
+
+#pg6 .image-column {
+  width: 40%;
+  margin-right: 20px;
+}
+
+#pg6 .image-column img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#pg6 .text-column {
+  width: 60%;
+}
+
+#pg6 .text-column span {
+  display: block;
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#pg6 .text-column p {
+  color: var(--text-color);
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 #pg6 .divider {
@@ -500,19 +636,35 @@ section:not(#pg1) {
   margin: 30px 0;
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
-   #pg6 .feature-row {
+@media (max-width: 768px) {
+  #pg6 .container {
     flex-direction: column;
   }
 
-  #pg6 .image-column {
-    width: 100%;
-    padding-right: 0;
-    margin-bottom: 20px;
+
+ #pg6 .feature-row {
+    gap: 20px;
   }
+
+  #pg6 .feature {
+    width: 100%;
+  }
+  
+  #pg6 .image-column {
+    margin-right: 0;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+
+
+
 
   #pg6 .text-column {
     width: 100%;
+  }
+   #pg6 .left-section span {
+    font-size: 24px;
   }
 }
 
@@ -520,6 +672,17 @@ section:not(#pg1) {
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
+#pg6 .container {
+    flex-direction: column;
+  }
+  
+  #pg6 .left-section {
+    margin-bottom: 30px;
+  }
+  
+  #pg6 .right-section {
+    width: 90%;
+  }
 }
 
 /* Section Pg-7 */
@@ -533,7 +696,7 @@ section:not(#pg1) {
 #pg7 .container {
   width: 100%;
   max-width: 100%;
-  margin: 0 auto;
+  margin: 0;
   display: flex;
   flex-direction: column;
 }
@@ -604,7 +767,29 @@ section:not(#pg1) {
 }
 
 
-@media (min-width: 481px) and (max-width: 768px) {
+@media (max-width: 768px) {
+  #pg7 .feature-row {
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+  }
+
+  #pg7 .feature {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 15px;
+    gap: 10px;
+
+  }
+  
+  #pg7 .image-column {
+    margin-right: 0;
+    width: 100%;
+  }
+  #pg7 .text-column {
+    width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -621,6 +806,13 @@ section:not(#pg1) {
   
   #pg7 .text-column p {
     font-size: 13px;
+  }
+   #pg7 .image-column {
+    width: 35%;
+  }
+  
+  #pg7 .text-column {
+    width: 65%;
   }
 }
 
@@ -659,7 +851,7 @@ section:not(#pg1) {
 
 #pg8 .image-container {
     flex: 1;
-    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -674,12 +866,13 @@ section:not(#pg1) {
 
 #pg8 .text-container {
     flex: 1;
-    width: 50%;
+    /* width: 50%; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 40px;
+    text-align: center;
 }
 
 #pg8 .text-container span {
@@ -703,13 +896,36 @@ section:not(#pg1) {
     margin-bottom: 20px;
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
+@media (max-width: 768px) {
+  #pg8 .container {
+    flex-direction: column;
+  }
+  
+  #pg8 .image-container, 
+  #pg8 .text-container {
+    max-width: 100%;
+  }
+  
+  #pg8 .text-container p {
+    max-width: 100%;
+  }
+  
+  #pg8 .image-container {
+    height: auto; /* Control image height on mobile */
 }
-
+  #img {
+    max-width: 100%;
+    height: auto;
+    object-fit:fill;
+  }
+}
 @media (max-width: 480px) {
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
+#pg8 .container {
+  padding: 30px;
+}
 }
 
 
@@ -771,91 +987,11 @@ section:not(#pg1) {
   border-radius: 5px; /* Optional: add slight rounding */
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
-}
-
-@media (max-width: 480px) {
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-}
-
-
-
-/* Add medium screen breakpoint */
-@media (min-width: 769px) and (max-width: 1024px) {
-  #pg2 .container, 
-  #pg3 .container,
-  #pg8 .container,
-  #pg9 .container {
-    padding: 30px;
-  }
-  
-  #pg9 .right-section {
-    margin-right: 20px;
-    width: 35%;
-  }
-  
-  #pg5 .grid-item {
-    padding: 20px;
-  }
-  
-  #pg6 .container {
-    flex-direction: column;
-  }
-  
-  #pg6 .left-section {
-    margin-bottom: 30px;
-  }
-  
-  #pg6 .right-section {
-    width: 90%;
-  }
-}
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
-  /* General responsive adjustments */
-  /* section {
-    padding: 40px 20px;
+   /* #pg9 .qr-code img {
+    max-width: 200px; 
   } */
-  
-  /* Section Pg-1 responsive */
-  
-  
-  /* Section Pg-2 and Pg-3 responsive */
-  #pg2 .container,
-  #pg3 .container {
-    flex-direction: column;
-    padding: 20px;
-  }
-  
-  #pg2 .text-content,
-  #pg3 .text-content {
-    max-width: 100%;
-    margin-bottom: 20px;
-    order: 2; /* Text below image on mobile */
-  }
-  
-  #pg2 .image-content,
-  #pg3 .image-content {
-    order: 1; /* Image above text on mobile */
-  }
-  #pg5 .grid-container {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 1fr);
-  }
-  /* Section Pg-8 responsive */
-  #pg8 .container {
-    flex-direction: column;
-  }
-  
-  #pg8 .text-container p {
-    max-width: 90%;
-  }
-  
-  /* Section Pg-9 responsive */
-  #pg9 .container {
+   #pg9 .container {
     flex-direction: column;
     padding: 40px 20px; /* Add horizontal padding */
   }
@@ -872,99 +1008,10 @@ section:not(#pg1) {
     width: 80%; /* Wider on mobile */
     max-width: 300px; /* Limit maximum width */
   }
-  
-  #pg9 .qr-code img {
-    max-width: 200px; /* Control QR code size on mobile */
-  }
-  
-  /* Adjust heights for mobile */
-  #pg2, #pg3, #pg4 {
-    height: auto;
-    min-height: 100vh;
-  }
 }
 
-/* Improve responsive behavior for sections with 100vh height */
-@media (max-width: 768px) and (orientation: portrait) {
-  #pg2, #pg3, #pg4, #pg5, #pg8 {
-    height: auto;
-    min-height: 100vh;
-    padding: 40px 20px;
-  }
-  
-  /* Fix container overflow issues on small screens */
-  .container {
-    padding: 20px;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-}
-
-/* Fix Section Pg-4 text container for better readability on small screens */
-@media (max-width: 768px) {
-  #pg4 .text-container {
-    padding: 25px 30px;
-    max-width: 90%;
-  }
-}
-
-/* Improve Pg-5 grid layout on medium screens */
-@media (min-width: 769px) and (max-width: 1024px) {
-  #pg5 .grid-item {
-    padding: 15px;
-    min-height: 200px;
-  }
-  
-  #pg5 .content-box h3 {
-    font-size: 18px;
-  }
-  
-  #pg5 .product-list {
-    font-size: 14px;
-  }
-}
-
-/* Fix Pg-8 responsive layout issues */
-@media (max-width: 768px) {
-  #pg8 .container {
-    flex-direction: column-reverse; /* Image below text for mobile */
-  }
-  
-  #pg8 .image-container, 
-  #pg8 .text-container {
-    width: 100%;
-  }
-  
-  #pg8 .text-container p {
-    max-width: 100%;
-  }
-  
-  #pg8 .image-container {
-    height: 40vh; /* Control image height on mobile */
-  }
-}
-
-/* Refine Pg-7 features for medium screens */
-@media (min-width: 769px) and (max-width: 1024px) {
-  #pg7 .feature {
-    padding: 15px;
-  }
-  
-  #pg7 .image-column {
-    width: 35%;
-  }
-  
-  #pg7 .text-column {
-    width: 65%;
-  }
-}
-
-/* Improve small screen touch targets */
 @media (max-width: 480px) {
-  
-  
-  #pg9 .container {
+   #pg9 .container {
     padding: 30px 15px;
   }
   
@@ -972,24 +1019,32 @@ section:not(#pg1) {
     font-size: 24px;
   }
 }
-/* Improve Pg-6 feature rows on smaller screens */
-@media (max-width: 768px) {
-  #pg6 .feature-row {
-    flex-direction: column;
-    margin: 30px 0;
+
+@media (min-width: 769px) and (max-width: 1024px) {
+#pg9 .container {
+    padding: 30px;
   }
   
-  #pg6 .image-column {
-    width: 100%;
-    padding-right: 0;
-    padding-bottom: 15px;
-  }
-  
-  #pg6 .text-column {
-    width: 100%;
-  }
-  
-  #pg6 .left-section span {
-    font-size: 24px;
+  #pg9 .right-section {
+    margin-right: 20px;
+    width: 35%;
   }
 }
+
+
+
+/* Improve responsive behavior for sections with 100vh height */
+/* @media (max-width: 768px) and (orientation: portrait) {
+  #pg2, #pg3, #pg4, #pg5, #pg8 {
+    height: auto;
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+  
+  .container {
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+} */
