@@ -116,38 +116,33 @@ section:not(#pg1) {
   max-height: 90%;
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
+@media (max-width: 768px) {
 #pg1 .top-bar {
     flex-direction: column;
     text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
   }
   
   #pg1 .left-section {
     flex-direction: column;
     margin-bottom: 15px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
   }
   
   #pg1 .right-section {
     text-align: center;
     margin-top: 15px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
   }
 }
 
 @media (max-width: 480px) {
-  #pg1 .top-bar {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  #pg1 .left-section {
-    flex-direction: column;
-    margin-bottom: 15px;
-  }
-  
-  #pg1 .right-section {
-    text-align: center;
-    margin-top: 15px;
-  }
   #pg1 .logo {
     width: 50px;
   }
@@ -768,11 +763,17 @@ section:not(#pg1) {
 
 
 @media (max-width: 768px) {
+  #pg7 {
+    max-width: 100%;
+  }
   #pg7 .feature-row {
     gap: 0;
     margin: 0;
     padding: 0;
     max-width: 100%;
+    margin-right: 15px;
+    flex-direction: column;
+    gap: 20px;
   }
 
   #pg7 .feature {
@@ -780,12 +781,16 @@ section:not(#pg1) {
     margin: 0;
     margin-bottom: 15px;
     gap: 10px;
+    padding: 0;
+    margin-left: 15px;
 
   }
   
   #pg7 .image-column {
-    margin-right: 0;
-    width: 100%;
+    margin-right: 5px;
+    margin-left: 5px;
+    max-width: 100%;
+
   }
   #pg7 .text-column {
     width: 100%;
@@ -813,21 +818,6 @@ section:not(#pg1) {
   
   #pg7 .text-column {
     width: 65%;
-  }
-}
-
-@media (max-width: 768px) {
-  #pg7 .feature-row {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  #pg7 .feature {
-    width: 100%;
-  }
-  
-  #pg7 .image-column {
-    margin-right: 15px;
   }
 }
 
