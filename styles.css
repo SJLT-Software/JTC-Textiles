@@ -20,7 +20,6 @@ body {
 html, body {
   margin: 0;
   padding: 0;
-  /* overflow-x: hidden; Prevent horizontal scrolling */
   max-width: 100%; /* Ensure content doesn't exceed viewport width */
   box-sizing: border-box; /* Include padding in width calculations */
 }
@@ -44,7 +43,11 @@ section:not(#pg1) {
     opacity: 0;
 } */
 
-@media (min-width: 481px) and (max-width: 768px) {
+@media (max-width: 768px) {
+  /* html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  } */
 }
 
 @media (max-width: 480px) {
@@ -542,41 +545,6 @@ section:not(#pg1) {
   text-align: center;
   color: var(--primary-color);
 }
-/* 
-#pg6 .feature-row {
-  display: flex;
-  align-items: center;
-  margin: 40px 0;
-}
-
-#pg6 .image-column {
-  width: 30%;
-  padding-right: 30px;
-}
-
-#pg6 .image-column img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-#pg6 .text-column {
-  width: 70%;
-}
-
-#pg6 .text-column h3 {
-  color: var(--primary-color);
-  font-size: 24px;
-  margin-bottom: 15px;
-}
-
-#pg6 .text-column p {
-  color: var(--text-color);
-  font-size: 16px;
-  line-height: 1.6;
-} */
-
 #pg6 .feature-row {
   display: flex;
   justify-content: space-between;
@@ -763,15 +731,12 @@ section:not(#pg1) {
 
 
 @media (max-width: 768px) {
-  #pg7 {
-    max-width: 100%;
-  }
   #pg7 .feature-row {
     gap: 0;
     margin: 0;
     padding: 0;
     max-width: 100%;
-    margin-right: 15px;
+    padding-right: 15px;
     flex-direction: column;
     gap: 20px;
   }
@@ -787,8 +752,10 @@ section:not(#pg1) {
   }
   
   #pg7 .image-column {
-    margin-right: 5px;
-    margin-left: 5px;
+    /* margin-right: 5px; */
+    /* margin-left: 5px; */
+    padding-left: 5px;
+    padding-right: 5px;
     max-width: 100%;
 
   }
