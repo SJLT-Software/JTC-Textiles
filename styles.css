@@ -530,6 +530,10 @@ section:not(#pg1) {
   #pg5 {
     height: auto;
   }
+  #pg5 .content-box.img-cont {
+    height: auto;
+    min-height: fit-content;
+  }
 }
 
 @media (max-width: 480px) {
