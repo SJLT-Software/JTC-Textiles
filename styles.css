@@ -803,6 +803,20 @@ section:not(#pg1) {
   #pg7 .text-column {
     max-width: 100%;
   }
+  #pg7 .text-column span {
+  font-family: Roboto;
+  display: block;
+  color: var(--primary-color);
+  font-size: 21px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+#pg7 .text-column p {
+  font-family: Roboto;
+  color: var(--text-color);
+  font-size: 15px;
+  line-height: 1.1;
+}
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -850,7 +864,7 @@ section:not(#pg1) {
 #pg8 .container {
     width: 100%;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Roboto;
     background-color: var(--secondary-color);
     color: var(--text-color);
     padding: 0;
@@ -888,7 +902,8 @@ section:not(#pg1) {
 }
 
 #pg8 .text-container span {
-    font-size: 30px;
+  font-family: Roboto;
+    font-size: 49px;
     margin-bottom: 20px;
     font-weight: bold;
     text-align: center;
@@ -901,8 +916,9 @@ section:not(#pg1) {
     margin: 20px 0;
 }
 #pg8 .text-container p {
-    font-size: 16px;
-    line-height: 1.6;
+    font-family: Roboto;
+    font-size: 20px;
+    line-height: 1.1;
     max-width: 70%;
     text-align: center;
     margin-bottom: 20px;
@@ -946,7 +962,7 @@ section:not(#pg1) {
 
 #pg9 .container{
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: Roboto;
   background-color: var(--primary-color);
   color: white;
   padding: 60px 0;
@@ -964,8 +980,10 @@ section:not(#pg1) {
 }
 
 #pg9 .heading span {
-    font-size: 30px;
+  font-family: Roboto;
+    font-size: 50px;
     font-weight: bold;
+    font-style: italic;
 }
 #pg9 .address, .mailandno {
     margin-top: 20px;
@@ -975,9 +993,10 @@ section:not(#pg1) {
 }
 
 #pg9 .address, .mailandno span {
+    font-family: Roboto;
     /* margin-left: 10px; */
     width: 100%;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 #pg9 .right-section {
@@ -989,6 +1008,9 @@ section:not(#pg1) {
   justify-content: center;
   width: 40%; /* Add width constraint instead of commenting it out */
   text-align: center;
+  font-family: Roboto;
+  font-size: 18px;
+
 }
 
 #pg9 img {
