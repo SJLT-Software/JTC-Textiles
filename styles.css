@@ -42,7 +42,9 @@ section {
 section:not(#pg1) {
     opacity: 0;
 } */
-
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 @media (max-width: 768px) {
   /* html, body {
     max-width: 100%;
@@ -51,6 +53,9 @@ section:not(#pg1) {
 }
 
 @media (max-width: 480px) {
+  body {
+    font-size : 14px;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -120,6 +125,10 @@ section:not(#pg1) {
 }
 
 @media (max-width: 768px) {
+#pg1 {
+  height: auto;
+  min-height: 100vh;
+}
 #pg1 .top-bar {
     flex-direction: column;
     text-align: center;
@@ -372,6 +381,7 @@ section:not(#pg1) {
   #pg4 {
     height: auto;
     min-height: 100vh;
+    background-attachment: scroll;
   }
    #pg4 .text-container {
     padding: 25px 30px;
@@ -492,6 +502,13 @@ section:not(#pg1) {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
   }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  #pg5 {
+    height: auto;
+  }
 }
 
 @media (max-width: 480px) {
@@ -600,6 +617,7 @@ section:not(#pg1) {
 @media (max-width: 768px) {
   #pg6 .container {
     flex-direction: column;
+    padding-bottom: 20px;
   }
 
 
@@ -629,8 +647,6 @@ section:not(#pg1) {
   }
 }
 
-@media (max-width: 480px) {
-}
 
 @media (min-width: 769px) and (max-width: 1024px) {
 #pg6 .container {
@@ -728,9 +744,7 @@ section:not(#pg1) {
   margin: 30px 0;
 }
 @media (max-width: 768px) {
-  /* #pg7 .divider {
-    display: block;
-  } */
+ 
   #pg7 .container {
     flex-direction: column;
     padding-top: 20px;
@@ -751,8 +765,10 @@ section:not(#pg1) {
     margin-right: 0;
     margin-bottom: 15px;
     gap: 20px;
-    padding: 0;
-    margin-left: 10px;
+    padding: 20px;
+    padding-right: 0;
+    padding-left: 0;
+    /* margin-left: 10px; */
 
   }
   
@@ -764,12 +780,6 @@ section:not(#pg1) {
   #pg7 .text-column {
     max-width: 100%;
   }
-  #pg7 .text-column p {
-
-  }
-}
-
-@media (max-width: 480px) {
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -792,6 +802,23 @@ section:not(#pg1) {
     width: 65%;
   }
 }
+
+/* Cards Responsiveness */
+@media (max-width: 480px) {
+  #pg6 .feature-row, #pg7 .feature {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+  }
+
+  #pg6 .image-column, #pg7 .image-column,
+  #pg6 .text-column, #pg7 .text-column {
+    width: 100%;
+  }
+}
+
 
 
 
