@@ -322,6 +322,7 @@ section:not(#pg1) {
     max-width: 100%;
     margin-bottom: 20px;
     order: 2; /* Text below image on mobile */
+    font-size: 30px;
   }
   
   
