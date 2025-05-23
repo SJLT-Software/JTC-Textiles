@@ -520,7 +520,23 @@ section:not(#pg1) {
 @media (max-width: 768px) {
   #pg5 .grid-container {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(6, auto);
+     grid-template-areas:
+      "item1"
+      "item2"
+      "item3"
+      "item4"
+      "item5"
+      "item6";
+  }
+  
+  /* Assign the grid areas according to your desired order */
+  #pg5 .grid-item:nth-child(1) { grid-area: item1; } /* [1,1] */
+  #pg5 .grid-item:nth-child(4) { grid-area: item2; } /* [2,1] */
+  #pg5 .grid-item:nth-child(2) { grid-area: item3; } /* [1,2] */
+  #pg5 .grid-item:nth-child(5) { grid-area: item4; } /* [2,2] */
+  #pg5 .grid-item:nth-child(3) { grid-area: item5; } /* [1,3] */
+  #pg5 .grid-item:nth-child(6) { grid-area: item6; } /* [2,3] */
   }
   img {
     max-width: 100%;
