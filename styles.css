@@ -556,10 +556,8 @@ section:not(#pg1) {
   width: 50%;
   display: flex;
   align-items: center;
-  /* background-color: white; */
   border-radius: 8px;
   padding: 20px;
-  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
 }
 
 #pg6 .image-column {
@@ -649,15 +647,11 @@ section:not(#pg1) {
 }
 
 /* Section Pg-7 */
-#pg7 {
-  margin: 0;
+#pg7 .container {
+  width: 100%;
   font-family: Arial, sans-serif;
   background-color: var(--accent-color);
   padding: 60px 0;
-}
-
-#pg7 .container {
-  width: 100%;
   max-width: 100%;
   margin: 0;
   display: flex;
@@ -681,10 +675,8 @@ section:not(#pg1) {
   width: 50%;
   display: flex;
   align-items: center;
-  /* background-color: white; */
   border-radius: 8px;
   padding: 20px;
-  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
 }
 
 #pg7 .image-column {
@@ -729,8 +721,20 @@ section:not(#pg1) {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-
+#pg7 .divider {
+  border: none;
+  height: 1px;
+  background-color: var(--secondary-color);
+  margin: 30px 0;
+}
 @media (max-width: 768px) {
+  /* #pg7 .divider {
+    display: block;
+  } */
+  #pg7 .container {
+    flex-direction: column;
+    padding-top: 20px;
+  }
   #pg7 .feature-row {
     gap: 0;
     margin: 0;
@@ -742,6 +746,7 @@ section:not(#pg1) {
 
   #pg7 .feature {
     width: 100%;
+    max-width: 100%;
     margin-top: 0;
     margin-right: 0;
     margin-bottom: 15px;
@@ -758,6 +763,9 @@ section:not(#pg1) {
   }
   #pg7 .text-column {
     max-width: 100%;
+  }
+  #pg7 .text-column p {
+
   }
 }
 
