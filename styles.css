@@ -161,6 +161,11 @@ section:not(#pg1) {
     margin-right: 0;
     padding: 0;
   }
+  #pg1 .logo-container {
+    margin-left: 0;
+    margin-right: 0;
+    
+  }
 }
 
 @media (max-width: 480px) {
